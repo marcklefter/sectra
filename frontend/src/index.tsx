@@ -2,17 +2,22 @@ import './index.css';
 
 // ...
 
-import { App } from './nodeClient';
+// import { App } from './nodeClient';
 
-App();
+// App();
 
 // ...
 
-// import React from 'react';
-// import ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-// ReactDOM.render(
-//   <React.StrictMode>
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
+import { App } from './hooks';
+// import { App } from './useStateImpl';
+// import { App } from './debounce';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
