@@ -1,0 +1,24 @@
+.Card {
+  margin-bottom: 25px;
+}
+
+.Card__small {
+  width: 200px;
+}
+
+.Card__medium {
+  width: 350px;
+}
+
+.Card__large {
+  width: 500px
+}
+
+.Card__title {
+    text-align: center;
+}
+
+.Card__image {
+    width: 100%;
+    height: auto;
+}
