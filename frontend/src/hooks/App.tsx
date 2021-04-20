@@ -43,10 +43,17 @@ const Counter = () => {
 export const App = () => {
   const [show, setShow] = useState(true);
 
+  const log = () => {
+    setTimeout(() => {
+      console.log('Count: ' + show);
+    }, 3000);
+  };
+
   return (
     <>
       <button onClick={() => setShow(true)}>Show Counter</button>
       <button onClick={() => setShow(false)}>Hide Counter</button>
+      <button onClick={() => log()}>Log</button>
       {show && <Counter />}
     </>
   )

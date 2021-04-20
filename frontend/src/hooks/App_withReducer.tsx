@@ -13,6 +13,16 @@ type Action =
   { type: 'UPDATE' } |
   { type: 'CHANGE', incBy: number };
 
+// function to initialize the state managed by useReducer. 
+//
+// See https://reactjs.org/docs/hooks-reference.html#lazy-initialization for more information.
+const setInitialState = (initialState: State) => {
+  return {
+    count: Number(window.localStorage.getItem('count')) ?? initialState.count,
+    incBy: initialState.incBy
+  };
+};
+
 function Counter() {
   const [state, dispatch] = useReducer(
     (state: State, action: Action) => {
@@ -33,11 +43,21 @@ function Counter() {
           return state;
       }
     },
+    // this "default" state is passed to setInitialState.
     {
       count: 0,
       incBy: 1
-    }
+    },
+    setInitialState
   );
+
+  const {
+    count
+  } = state;
+
+  useEffect(() => {
+    window.localStorage.setItem('count', count.toString());
+  }, [count]);
 
   useEffect(() => {
     const handle = setInterval(() => {
