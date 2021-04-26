@@ -27,7 +27,7 @@ const apiFetch = async (url: string) => {
   return response.json();
 }
 
-const getUserResourceUrl = (userId: number) => `http://jsonplaceholder.typicode.com/users/${userId}`;
+const getUserResourceUrl = (userId: number) => `${process.env.REACT_APP_API_URL}/users/${userId}`;
 
 // debounced function that is called with an updater function; the updater will update the component state tracking
 // the current user resource URL.

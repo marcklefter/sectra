@@ -14,6 +14,8 @@ import ReactDOM from 'react-dom';
 import { App } from './hooks';
 // import { App } from './useStateImpl';
 // import { App } from './debounce';
+// import { App } from './useTask';
+// import { App } from './dataFetching';
 
 ReactDOM.render(
   <React.StrictMode>
