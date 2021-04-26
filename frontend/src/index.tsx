@@ -11,12 +11,12 @@ import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// import { App } from './hooks';
+import { App } from './hooks';
 // import { App } from './useStateImpl';
 // import { App } from './debounce';
 // import { App } from './useTask';
 // import { App } from './dataFetching';
-import { App } from './todo';
+// import { App } from './todo';
 
 ReactDOM.render(
   <React.StrictMode>
