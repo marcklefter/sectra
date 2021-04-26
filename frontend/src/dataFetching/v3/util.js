@@ -10,11 +10,7 @@ const delay = (resolveWith, ms) => {
 }
 
 export const fetchResource = async (uri, delayMs) => {
-  const result = await axios(uri, {
-    headers: {
-      Authorization: 'Bearer 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'
-    }
-  });
+  const result = await axios(uri);
 
   return delayMs ? delay(result.data, delayMs) : result.data;
 }
